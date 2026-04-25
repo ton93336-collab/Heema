@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กลุ่มบล็อกป้าย ✿ NONIOAEY</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&family=Itim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="deco-float" id="decos"></div>
+<div class="admin-indicator">🔑 โหมดแอดมิน - กดที่รูปเพื่อเปลี่ยน</div>
+
+<div class="page-header">
+  <a href="index.html" class="back-btn">‹</a>
+  <div class="page-title">กลุ่มบล็อกป้าย 🎨</div>
+</div>
+
+<div class="page-content">
+  <div class="info-card">
+    ตัวอย่างงาน <span class="highlight">บล็อกป้ายและของตกแต่ง</span><br>
+    กดปุ่ม "ดูตัวอย่าง" เพื่อดูผลงานเต็ม ✨
+  </div>
+
+  <div class="work-grid" id="blockWorksGrid"></div>
+  <button class="btn-add-work" id="addWorkBtn_block">➕ เพิ่มตัวอย่างงาน</button>
+</div>
+
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/share/1De6NiueGU/?mibextid=wwXIfr" target="_blank" class="footer-social"><div class="footer-icon fb-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div><span>Facebook</span></a>
+    <a href="https://line.me/ti/p/xnh050s5VP" target="_blank" class="footer-social"><div class="footer-icon line-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 10.314C24 4.943 18.615.001 12 .001S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></div><span>Line</span></a>
+  </div>
+  <div class="footer-credit">design. @NONIOAEY</div>
+</footer>
+
+<button class="admin-fab" onclick="toggleAdmin()">⚙️</button>
+<button class="admin-logout-btn" onclick="logoutAdmin()">🔒 ออก</button>
+
+<div class="modal-overlay" id="adminModal"><div class="modal-box"><div class="modal-title">🔐 Admin Login</div><input type="password" id="adminPass" placeholder="รหัสผ่าน..." class="admin-input"><div class="modal-btns"><button class="btn-cancel" onclick="closeAdminModal()">ยกเลิก</button><button class="btn-confirm" onclick="checkAdmin()">เข้าสู่ระบบ</button></div></div></div>
+<div class="preview-modal" id="previewModal"><div class="preview-box"><div class="preview-title" id="previewTitle">ดูตัวอย่าง</div><div class="preview-link-display" id="previewLinkDisplay"></div><a class="btn-go-link" id="previewGoBtn" href="#" target="_blank">🔗 เปิดลิงค์</a><button class="btn-close-preview" onclick="closePreviewModal()">ปิด</button></div></div>
+<div class="img-modal" id="imgModal" onclick="closeImgModal()"><div class="img-modal-inner"><button class="img-modal-close" onclick="closeImgModal()">✕</button><img id="imgModalSrc" src="" alt=""></div></div>
+
+<script src="script.js"></script>
+
+<script>document.addEventListener('DOMContentLoaded', () => { initWorkPage('block', 'blockWorksGrid', true); });</script>
+
+</body>
+</html>
