@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ป้ายไอดี ✿ NONIOAEY</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&family=Itim&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="deco-float" id="decos"></div>
+<div class="admin-indicator">🔑 โหมดแอดมิน - กดที่รูปเพื่อเปลี่ยน</div>
+
+<div class="page-header">
+  <a href="index.html" class="back-btn">‹</a>
+  <div class="page-title">ป้ายไอดี 🎮</div>
+</div>
+
+<div class="page-content">
+
+  <div class="info-card">
+    รับทำป้ายขายไอดี<br>
+    <span class="highlight">ดีไซน์สวย โดดเด่น ดึงดูดลูกค้า</span>
+  </div>
+
+  <div class="price-grid">
+    <div class="price-box">
+      <div class="price-box-title">⚡ Skin Rate</div>
+      <div class="price-row">
+        <span class="price-label" style="font-size:12px">1 - 100 สกิน</span>
+        <span class="price-badge">0.50</span>
+      </div>
+      <div class="price-row" style="padding-top:8px">
+        <span class="price-label" style="font-size:12px">100+ สกิน</span>
+        <span class="price-badge">1.00</span>
+      </div>
+    </div>
+
+```
+<div class="price-box">
+  <div class="price-box-title">🎨 Others</div>
+  <div class="price-row">
+    <span class="price-label" style="font-size:12px">หัวป้าย</span>
+    <span class="price-badge">35.-</span>
+  </div>
+  <div class="price-row" style="padding-top:4px">
+    <span class="price-label" style="font-size:12px">ป้ายไฟ</span>
+    <span class="price-badge">2.-/ชิ้น</span>
+  </div>
+  <div class="price-row" style="padding-top:4px">
+    <span class="price-label" style="font-size:12px">ประดับ</span>
+    <span class="price-badge">0.50/ชิ้น</span>
+  </div>
+</div>
+```
+
+  </div>
+
+  <div class="price-card">
+    <div class="note-row">✏️ แก้ฟรี 1 ครั้งก่อนส่งงาน — หลังส่งงานแก้จุดละ 5 บาท</div>
+    <div class="note-row" style="margin-top:6px">⏰ รองาน 4-8 ชั่วโมง หากคิวเยอะจะแจ้งก่อน</div>
+  </div>
+
+  <!-- Example works (expandable images) -->
+
+  <div class="section-divider">
+    <span class="star">★</span> ตัวอย่างงาน <span class="star">★</span>
+  </div>
+
+  <div class="banner-grid" id="bannerGrid"></div>
+
+  <button class="btn-add-work" id="addBannerBtn" style="margin-top:12px">
+    ➕ เพิ่มตัวอย่างงาน
+  </button>
+</div>
+
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/share/1De6NiueGU/?mibextid=wwXIfr" target="_blank" class="footer-social">
+      <div class="footer-icon fb-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+      <span>Facebook</span>
+    </a>
+    <a href="https://line.me/ti/p/xnh050s5VP" target="_blank" class="footer-social">
+      <div class="footer-icon line-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 10.314C24 4.943 18.615.001 12 .001S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      </div>
+      <span>Line</span>
+    </a>
+  </div>
+  <div class="footer-credit">design. @NONIOAEY</div>
+</footer>
+
+<button class="admin-fab" onclick="toggleAdmin()">⚙️</button>
+<button class="admin-logout-btn" onclick="logoutAdmin()">🔒 ออก</button>
+
+<div class="modal-overlay" id="adminModal">
+  <div class="modal-box">
+    <div class="modal-title">🔐 Admin Login</div>
+    <input type="password" id="adminPass" placeholder="รหัสผ่าน..." class="admin-input">
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeAdminModal()">ยกเลิก</button>
+      <button class="btn-confirm" onclick="checkAdmin()">เข้าสู่ระบบ</button>
+    </div>
+  </div>
+</div>
+
+<div class="img-modal" id="imgModal" onclick="closeImgModal()">
+  <div class="img-modal-inner">
+    <button class="img-modal-close" onclick="closeImgModal()">✕</button>
+    <img id="imgModalSrc" src="" alt="">
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+// Banner-specific: click opens big image, admin can upload
+const BANNER_KEY = 'banner_works';
+let bannerItems = JSON.parse(localStorage.getItem('nonioaey_' + BANNER_KEY) || '[]');
+
+function renderBanners() {
+  const grid = document.getElementById('bannerGrid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  if (bannerItems.length === 0) {
+    bannerItems = [{ name: 'ป้ายลายอนิเมะ', img: null }, { name: 'Mascot', img: null }];
+  }
+
+  bannerItems.forEach((item, i) => {
+    const card = document.createElement('div');
+    card.className = 'banner-card';
+    card.innerHTML = `
+      <div style="width:100%;aspect-ratio:1;background:linear-gradient(135deg,#fce4ec,#fff);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden;" 
+           id="bannerImg_${i}" onclick="bannerImgClick(${i})">
+        ${item.img ? `<img src="${item.img}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">` 
+                   : `<span style="font-size:28px">🖼️</span><span style="font-size:11px;color:#bcaaa4">${isAdmin ? 'คลิกเพื่อเพิ่มรูป' : ''}</span>`}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;padding:8px;">
+        <input value="${item.name || ''}" placeholder="ชื่องาน..." 
+          style="border:none;font-size:12px;font-family:Mitr;text-align:center;color:#8d6e63;background:transparent;outline:none;width:100%;font-weight:500;"
+          onchange="updateBannerName(${i}, this.value)" ${isAdmin ? '' : 'readonly'}>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function bannerImgClick(i) {
+  if (isAdmin) {
+    createFileInput((dataUrl) => {
+      bannerItems[i].img = dataUrl;
+      saveBanners();
+      renderBanners();
+      showToast('✅ อัปโหลดสำเร็จ!');
+    });
+  } else if (bannerItems[i].img) {
+    openImgModal(bannerItems[i].img);
+  }
+}
+
+function updateBannerName(i, name) {
+  bannerItems[i].name = name;
+  saveBanners();
+}
+
+function saveBanners() {
+  localStorage.setItem('nonioaey_' + BANNER_KEY, JSON.stringify(bannerItems));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderBanners();
+  
+  const addBtn = document.getElementById('addBannerBtn');
+  if (addBtn) {
+    addBtn.onclick = () => {
+      bannerItems.push({ name: 'งานใหม่', img: null });
+      saveBanners();
+      renderBanners();
+    };
+  }
+});
+</script>
+
+</body>
+</html>
